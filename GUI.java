@@ -35,6 +35,30 @@ public class GUI extends GBFrame{
 		
 	}
 	
+	public void buttonClicked(JButton buttonObj){
+		if(buttonObj == clearData){
+			
+		}
+		else if(buttonObj == salaryInput){
+			
+		}
+		else if(buttonObj == commissionedInput){
+			
+		}
+		else if(buttonObj == hourlyInput){
+			
+		}
+		else if(buttonObj == partTimeInput){
+			
+		}
+		else if(buttonObj == outputAll){
+			
+		}
+		else if(buttonObj == saveAndClose){
+			
+		}
+	}
+	
 	
 	
 	public static void main (String [] args){
