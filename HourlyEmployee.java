@@ -22,15 +22,15 @@ public class HourlyEmployee extends Employee{
 	public int getHoursWorked(){
 		return hoursWorked;
 	}
+	
+	public double getFinalSalary(){
+		return finalSalary;
+	}
 
 	public String Print() {
-		String Output =  Format.justify('l', "Name", 15) + Format.justify('l', "ID Number", 15) + 
-		Format.justify('l', "Hourly Wage",15) + Format.justify('l', "Hours Worked", 15) +
-		Format.justify('l', "Total Salary", 15) + "\n";
-		Output +=  Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
+		return Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
 		Format.justify('l', "$" + String.format("$%.2f", hourlyWage),15) + Format.justify('l', hoursWorked, 15) + 
 		Format.justify('l', "$" + String.format("$%.2f", finalSalary), 15) + "\n";
-		return Output;
 	}
 	
 	public static void checkHourlyEmployee(String Name, String idNumber, double hourlyWage, double hoursWorked){

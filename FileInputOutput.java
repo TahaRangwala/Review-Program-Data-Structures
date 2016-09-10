@@ -32,7 +32,6 @@ public class FileInputOutput {
 			Output = Input.readObject();
 			File2.close();
 			Input.close();
-			
 		}
 		catch(ClassNotFoundException E){
 			System.out.println(E);

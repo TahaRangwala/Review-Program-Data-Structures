@@ -27,14 +27,10 @@ public class CommissionEmployee extends Employee{
 
 	@Override
 	public String Print() {
-		String Output =  Format.justify('l', "Name", 15) + Format.justify('l', "ID Number", 15) + 
-		Format.justify('l', "Fixed Salary",15) + Format.justify('l', "Sales Made", 15) +
-		Format.justify('l', "Total Salary", 15) + "\n";
-		Output +=  Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
+		return Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
 		Format.justify('l', "$" + String.format("$%.2f", fixedSalary),15) + 
 		Format.justify('l', "$" + String.format("$%.2f", salesMade), 15) + 
 		Format.justify('l', "$" + String.format("$%.2f", finalSalary), 15) + "\n";
-		return Output;
 	}
 
 	public static void checkCommissionEmployee(String Name, String idNumber, double fixedSalary, double salesMade){

@@ -8,14 +8,15 @@ public class SalaryEmployee extends Employee{
 		super(Name, idNumber);
 		this.weeklySalary = weeklySalary;
 	}
+	
+	public double getFinalSalary(){
+		return weeklySalary;
+	}
 
 	@Override
 	public String Print() {
-		String Output =  Format.justify('l', "Name", 15) + Format.justify('l', "ID Number", 15) + 
-		Format.justify('l', "Total Salary",15) + "\n";
-		Output +=  Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
-		Format.justify('l', "$" + String.format("$%.2f", weeklySalary),15) + "\n\n";
-		return Output;
+		return Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
+		Format.justify('l', "$" + String.format("$%.2f", weeklySalary),15) + "\n";
 	}
 	
 	public static void checkSalaryEmployee(String Name, String idNumber, double weeklySalary){

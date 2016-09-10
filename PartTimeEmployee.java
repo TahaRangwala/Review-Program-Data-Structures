@@ -9,19 +9,15 @@ public class PartTimeEmployee extends HourlyEmployee{
 		Salary = hourlyWage * hoursWorked;
 	}
 	
-	public double getSalary(){
+	public double getFinalSalary(){
 		return Salary;
 	}
 
 	@Override
 	public String Print() {
-		String Output =  Format.justify('l', "Name", 15) + Format.justify('l', "ID Number", 15) + 
-		Format.justify('l', "Hourly Wage",15) + Format.justify('l', "Hours Worked", 15) +
-		Format.justify('l', "Total Salary", 15) + "\n";
-		Output +=  Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
+		return Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
 		Format.justify('l', "$" + String.format("$%.2f", getHourlyWage()),15) + Format.justify('l', getHoursWorked(), 15) + 
 		Format.justify('l', "$" + String.format("$%.2f", Salary), 15) + "\n";
-		return Output;
 	}
 	
 	public static void checkPartTimeEmployee(String Name, String idNumber, double hourlyWage, double hoursWorked){

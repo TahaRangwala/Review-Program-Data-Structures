@@ -21,6 +21,8 @@ public abstract class Employee implements Comparable{
 		return getName().compareTo(((Employee) O).getName());
 	}
 	
+	public abstract double getFinalSalary();
+	
 	public abstract String Print();
 	
 	

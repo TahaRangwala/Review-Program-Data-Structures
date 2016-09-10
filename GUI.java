@@ -35,6 +35,9 @@ public class GUI extends GBFrame{
 		outputAll = addButton("Output All Information",6,2,1,1);
 		saveAndClose = addButton("Save and Exit",6,3,1,1);
 		
+		if(outputArea.getText().length() == 23 || outputArea.getText().length() == 24)
+			outputArea.setText("");
+		
 	}
 	
 	public void buttonClicked(JButton buttonObj){
