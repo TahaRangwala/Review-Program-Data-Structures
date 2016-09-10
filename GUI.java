@@ -31,7 +31,7 @@ public class GUI extends GBFrame{
 		commissionedInput = addButton("Commissioned Employee Input",4,2,1,1);
 		hourlyInput = addButton("Hourly Employee Input",4,3,1,1);
 		partTimeInput = addButton("Part Time Employee Input",4,4,1,1);
-		outputArea = addTextArea("",5,1,4,1);
+		outputArea = addTextArea(FileInputOutput.getFile().toString(),5,1,4,1);
 		outputAll = addButton("Output All Information",6,2,1,1);
 		saveAndClose = addButton("Save and Exit",6,3,1,1);
 		

@@ -1,5 +1,6 @@
+import java.io.*;
 
-public class Database {
+public class Database implements Serializable{
 	
 	private Employee[] allEmployees;
 	private int employCount;
