@@ -17,8 +17,11 @@ public abstract class Employee implements Comparable{
 		return idNumber;
 	}
 	
+	public int compareTo(Object O) {
+		return getName().compareTo(((Employee) O).getName());
+	}
+	
 	public abstract String Print();
 	
-	public abstract int compareTo(Object O);
 	
 }

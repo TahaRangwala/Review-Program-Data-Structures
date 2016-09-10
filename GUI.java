@@ -5,6 +5,7 @@ import java.awt.Color;
 
 public class GUI extends GBFrame{
 	
+	private Database Information;
 	private JLabel nameLabel, idLabel, fixedSalaryLabel, salesLabel, hoursLabel;
 	private JTextField nameField, idField;
 	private DoubleField fixedSalaryField, salesField;
@@ -14,6 +15,7 @@ public class GUI extends GBFrame{
 	
 	public GUI(){
 		
+		Information = new Database();
 		nameLabel = addLabel("Name",1,1,1,1);
 		nameField = addTextField("",1,2,1,1);
 		idLabel = addLabel("ID Number",1,3,1,1);
@@ -40,6 +42,17 @@ public class GUI extends GBFrame{
 			
 		}
 		else if(buttonObj == salaryInput){
+			if(checkNumberValues()){
+				try{
+					SalaryEmployee.checkSalaryEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber());
+					Information.addEmployee(new SalaryEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber()));
+				}
+				catch(Exception E){
+					JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+			else
+				JOptionPane.showMessageDialog(new JFrame(),"Make Sure All Number Values Are Valid Numbers!", "Error Message", JOptionPane.ERROR_MESSAGE);
 			
 		}
 		else if(buttonObj == commissionedInput){
@@ -57,6 +70,10 @@ public class GUI extends GBFrame{
 		else if(buttonObj == saveAndClose){
 			
 		}
+	}
+	
+	private boolean checkNumberValues(){
+		return hoursField.isValidNumber() && fixedSalaryField.isValidNumber() && salesField.isValidNumber();
 	}
 	
 	
