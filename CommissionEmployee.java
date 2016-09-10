@@ -39,13 +39,13 @@ public class CommissionEmployee extends Employee{
 
 	public static void checkCommissionEmployee(String Name, String idNumber, double fixedSalary, double salesMade){
 		if(Name == ""){
-			throw new IllegalArgumentException("Please Input the Correct Name For A Commision Employee!");
+			throw new IllegalArgumentException("Please Input the Correct Name For A Commission Employee!");
 		}
 		else if(idNumber == "" || idNumber.length() != 6){
-			throw new IllegalArgumentException("Please Input the Correct ID Number For A Commision Employee!");
+			throw new IllegalArgumentException("Please Input the Correct ID Number For A Commission Employee!");
 		}
 		else if(fixedSalary < 0){
-			throw new IllegalArgumentException("Please Input the Correct HourlyWage For A Commission Employee!");
+			throw new IllegalArgumentException("Please Input the Correct Fixed Salary For A Commission Employee!");
 		}
 		else if(salesMade < 0){
 			throw new IllegalArgumentException("Please Input the Correct Sales Made For A Commission Employee!");

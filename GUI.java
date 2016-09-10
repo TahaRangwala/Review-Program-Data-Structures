@@ -56,13 +56,43 @@ public class GUI extends GBFrame{
 			
 		}
 		else if(buttonObj == commissionedInput){
-			
+			if(checkNumberValues()){
+				try{
+					CommissionEmployee.checkCommissionEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber(), salesField.getNumber());
+					Information.addEmployee(new CommissionEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber(),salesField.getNumber()));
+				}
+				catch(Exception E){
+					JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+			else
+				JOptionPane.showMessageDialog(new JFrame(),"Make Sure All Number Values Are Valid Numbers!", "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		else if(buttonObj == hourlyInput){
-			
+			if(checkNumberValues()){
+				try{
+					HourlyEmployee.checkHourlyEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber(), hoursField.getNumber());
+					Information.addEmployee(new HourlyEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber(), hoursField.getNumber()));
+				}
+				catch(Exception E){
+					JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+			else
+				JOptionPane.showMessageDialog(new JFrame(),"Make Sure All Number Values Are Valid Numbers!", "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		else if(buttonObj == partTimeInput){
-			
+			if(checkNumberValues()){
+				try{
+					PartTimeEmployee.checkPartTimeEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber(), hoursField.getNumber());
+					Information.addEmployee(new PartTimeEmployee(nameField.getText(), idField.getText(), fixedSalaryField.getNumber(), hoursField.getNumber()));
+				}
+				catch(Exception E){
+					JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+			else
+				JOptionPane.showMessageDialog(new JFrame(),"Make Sure All Number Values Are Valid Numbers!", "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		else if(buttonObj == outputAll){
 			
