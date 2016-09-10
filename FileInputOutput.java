@@ -18,7 +18,7 @@ public class FileInputOutput {
 			
 		}
 		catch(IOException E){
-			JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+			System.out.println(E);
 		}
 	}
 	
@@ -35,10 +35,10 @@ public class FileInputOutput {
 			
 		}
 		catch(ClassNotFoundException E){
-			JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+			System.out.println(E);
 		}
 		catch(IOException E){
-			JOptionPane.showMessageDialog(new JFrame(),E.getLocalizedMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
+			System.out.println(E);
 		}
 		
 		return Output;
