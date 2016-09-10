@@ -98,7 +98,7 @@ public class GUI extends GBFrame{
 				JOptionPane.showMessageDialog(new JFrame(),"Make Sure All Number Values Are Valid Numbers!", "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		else if(buttonObj == outputAll){
-			
+			outputArea.setText(Information.getAllEmployees());
 		}
 		else if(buttonObj == saveAndClose){
 			

@@ -28,16 +28,16 @@ public class CommissionEmployee extends Employee{
 	@Override
 	public String Print() {
 		return Format.justify('l', getName(), 15) + Format.justify('l', getIDNumber(), 15) + 
-		Format.justify('l', "$" + String.format("$%.2f", fixedSalary),15) + 
-		Format.justify('l', "$" + String.format("$%.2f", salesMade), 15) + 
-		Format.justify('l', "$" + String.format("$%.2f", finalSalary), 15) + "\n";
+		Format.justify('l', String.format("$%.2f", fixedSalary),15) + 
+		Format.justify('l', String.format("$%.2f", salesMade), 15) + 
+		Format.justify('l', String.format("$%.2f", finalSalary), 15) + "\n";
 	}
 
 	public static void checkCommissionEmployee(String Name, String idNumber, double fixedSalary, double salesMade){
-		if(Name == ""){
+		if(Name.equals("")){
 			throw new IllegalArgumentException("Please Input the Correct Name For A Commission Employee!");
 		}
-		else if(idNumber == "" || idNumber.length() != 6){
+		else if(idNumber.equals("")|| idNumber.length() != 6){
 			throw new IllegalArgumentException("Please Input the Correct ID Number For A Commission Employee!");
 		}
 		else if(fixedSalary < 0){
